@@ -10,7 +10,7 @@ const createIntern = async function (req, res) {
         let mobile = data.mobile
         let ObjectId = data.collegeId
         if (Object.keys(data).length != 0) {
-            if (data.name == undefined || data.email == undefined || data.mobile == undefined || data.collegeId == undefined || data.name.trim().length == 0
+            if (data.name === undefined || data.email == undefined || data.mobile == undefined || data.collegeId == undefined || data.name.trim().length == 0
                 || data.email.trim().length == 0 || data.mobile.trim().length == 0) {
                 return res.status(400).send({ status: false, msg: "Mandatory field missing" })
             }
